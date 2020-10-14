@@ -2,7 +2,8 @@
 <html>
 
 <head>
-	<title>figma.com</title>
+	<title>Moonhive</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -23,7 +24,7 @@
 					<li><a href="#">CAREER</a></li>
 					<li><a href="#courses">COURSES</a></li>
 				</ul>
-				<div class="booking mx-n30">
+				<div class="booking my-n10">
 					<li>
 						<a href="#" style="font-size: 2rem;"><b>CALL:+918900001123</b></a>
 					</li>
@@ -33,7 +34,7 @@
 			</div>
 		</nav>
 		<div class="main-content">
-			<h1>Banglore's Best Face to Face and Online Live Classes</h1>
+			<h1 style="display: inline;">Banglore's Best Face to Face and Online Live Classes</h1>
 			<h3 class="my-3"><span>Join our Class and Upgrade Your Skills</span></h3>
 			<button class="myBtn myBtn-full my-5" id="myBtn1">ENROLL NOW</button>
 			<button class="myBtn myBtn-half my-5" id="myBtn2">BOOK A FREE CLASS</button>
@@ -199,6 +200,29 @@
 	</div>
 </div>
 
+<h1 style="text-align: center; margin-top: 6rem; margin-bottom: 6rem;">Student Reviews</h1>
+
+
+<div class="row row-content">
+	<div class="col-xs-12 col-sm-3">
+		<img src="student_image.jpeg" class="img-circle" alt="John">
+	</div>
+	<div class="col-xs-12 col-sm-9" >
+		<div class="media-body">
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem corporis tenetur ad explicabo libero odio reiciendis quasi minus reprehenderit veniam ab quo et voluptatem molestiae, quis delectus neque aliquam consequuntur. </p>
+			<ul>
+			<li><p><a href="facebook.com"><i class="fa fa-facebook-official" aria-hidden="true" style="color: black ; font-size: 7rem;"></i></a></p></li>
+			<li><p><a href="google.com"><i class="fa fa-google-plus-circle" aria-hidden="true" style="color: black; font-size:7rem;"></i></a></p></li>
+		</ul>
+		</div>
+		<div class="media-right media-middle">
+			<a href="#">
+				<p style="color: black; padding-top: 5rem; padding-right: 5rem;">/John </p>
+			</a>
+		</div>
+	</div>
+</div>
+
 	<div id="myModal" class="modal">
 
 		<!-- Modal content -->
@@ -232,7 +256,8 @@
 					</div>
 				</div>
 				<div class="d-flex justify-content-center align-items-center">
-					<button type="button" class="btn btn-danger ">Submit</button>
+					<button type="button" class="btn btn-danger "onclick=loadDoc()>Submit</button>
+					<span id="success" class="p-4"></span>
 				</div>
 			</form>
 		</div>
@@ -358,6 +383,9 @@
 			if (event.target == modal) {
 				modal.style.display = "none";
 			}
+		}
+		function loadDoc(){
+			document.getElementById('success').innerHTML="Success"
 		}
 	</script>
 

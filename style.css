@@ -44,6 +44,7 @@ header{
 }
 .booking{
 	float: right;
+	margin-top: -10rem;
 }
 .main-nav li{
 	display: inline-block;
@@ -211,4 +212,19 @@ a{
 a:link{
 	color: white;
 	text-decoration: none;
+}
+
+.review ul li{
+	display:inline-flex;
+	padding: 0px;
+}
+
+.review p{
+	text-align: left;
+}
+
+.media-body ul li{
+	display: inline-flex;
+	padding: 10px;
+	
 }
