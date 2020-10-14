@@ -6,6 +6,7 @@
 body{
 	font-size: 20px;
 	overflow-x: hidden;
+	background-color: rgb(214, 235, 235);
 
 }
 
@@ -190,4 +191,24 @@ a:visited{
 	width: 33%;
 	padding:15px;
 	background-color:#292929;
+}
+
+.foot{
+	margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.foot ul li{
+	display:inline;
+	
+	padding: 10px;
+}
+a{
+	color: white;
+	text-decoration: none;
+}
+a:link{
+	color: white;
+	text-decoration: none;
 }
