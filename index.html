@@ -228,28 +228,28 @@
 		<div class="modal-content">
 			<span class="close">&times;</span>
 			<h1 style="text-align: center; color: white;">Book a Free Class or Enroll Now</h1>
-			<form>
+			<form  name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
 				<!-- <br><br> -->
 				<div class="form-row py-3">
 					<div class="col">
-						<input type="text" class="form-control" placeholder="First name">
+						<input type="text" name="fname" class="form-control" placeholder="First name">
 					</div>
 					<div class="col">
-						<input type="text" class="form-control" placeholder="Last name">
+						<input type="text" name="lname" class="form-control" placeholder="Last name">
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="col">
-						<input type="email" class="form-control" placeholder="E-mail Id">
+						<input type="email" name="email" class="form-control" placeholder="E-mail Id">
 					</div>
 					<div class="col">
-						<input type="text" class="form-control" placeholder="Location">
+						<input type="text" name="location" class="form-control" placeholder="Location">
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="col">
 						<div class="form-group py-3">
-							<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+							<textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"
 								placeholder="Message to Us"></textarea>
 						</div>
 					</div>
@@ -259,7 +259,7 @@
 					<span id="sucess" class="p-2"></span>
 					<br>
 
-					<button type="button" class="btn btn-danger " onclick=suces()>Submit</button>
+					<button type="button" class="btn btn-danger " onclick=validateForm()>Submit</button>
 				</div>
 			</form>
 		</div>
@@ -386,13 +386,38 @@
 				modal.style.display = "none";
 			}
 		}
+		function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  var x1 = document.forms["myForm"]["lname"].value;
+  var x2 = document.forms["myForm"]["email"].value;
+  var x3 = document.forms["myForm"]["location"].value;
+  var x4 = document.forms["myForm"]["message"].value;
+  if (x == "") {
+    alert("First Name must be filled out");
+    return false;
+  }
+  if (x1 == "") {
+    alert("Last Name must be filled out");
+    return false;
+  }
+  if (x2 == "") {
+    alert("E-mail must be filled out");
+    return false;
+  }
+  if (x3 == "") {
+    alert("Location must be filled out");
+    return false;
+  }
+  if (x4 == "") {
+    alert("Message must be filled out");
+    return false;
+  }
+  else{
+	document.getElementById('sucess').innerHTML="Success";
 
-		function suces(){
-			
-			document.getElementById('sucess').innerHTML="Success";
-			window.location.href="index.html";
-		
-		}
+  }
+}
+
 	</script>
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
