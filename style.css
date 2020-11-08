@@ -160,7 +160,7 @@ a:visited{
   }
 
   .hide {
-	display: none;
+	display:none;
   }
 
   .card-body:hover{
@@ -225,6 +225,6 @@ a:link{
 
 .media-body ul li{
 	display: inline-flex;
-	padding: 10px;
-	
+	padding: 5px;
+
 }
